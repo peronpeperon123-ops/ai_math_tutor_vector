@@ -146,7 +146,7 @@ if user_input or uploaded_file:
         try:
             # 最新の軽量・高速モデルを使用
             model = genai.GenerativeModel(
-                model_name="gemini-2.5-flash",
+                model_name="gemini-1.5-flash",
                 system_instruction=system_instruction
             )
             response = model.generate_content(content, stream=True)
