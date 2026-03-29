@@ -144,7 +144,7 @@ if user_input or uploaded_file:
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         try:
-            
+            # 最新の gemini-2.5-flash モデルを使用（数学的推論と精度に優れています）
             model = genai.GenerativeModel(
                 model_name="gemini-2.5-flash",
                 system_instruction=system_instruction
