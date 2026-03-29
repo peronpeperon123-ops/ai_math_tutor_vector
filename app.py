@@ -144,9 +144,9 @@ if user_input or uploaded_file:
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         try:
-            # 1.5-flash は無料枠のトークン制限が広いため、巨大な知識ベースに適しています
+            
             model = genai.GenerativeModel(
-                model_name="gemini-2.0-flash",
+                model_name="gemini-2.5-flash",
                 system_instruction=system_instruction
             )
             response = model.generate_content(content, stream=True)
